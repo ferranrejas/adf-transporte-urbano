@@ -1,0 +1,17 @@
+{
+	"name": "dw_transporte",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "sql-ucb-server-transporteurbano-976755.database.windows.net",
+			"database": "dw_transporte",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "FerranVel",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDFENTVGMUYzLUZEMjUtNEFEOC1CQzE2LTI5QzBDRjI1OEI0NV9mYmIyNzE3OS1jMGYyLTRmNGEtODExZC1iNTVhNGQwMzI0MjgiDQp9"
+		}
+	}
+}
