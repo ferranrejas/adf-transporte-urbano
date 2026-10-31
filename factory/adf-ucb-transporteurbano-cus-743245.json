@@ -1,0 +1,10 @@
+{
+	"name": "adf-ucb-transporteurbano-cus-743245",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "brazilsouth"
+}
