@@ -1,0 +1,112 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Nombre de instancia de Data Factory",
+			"defaultValue": "adf-ucb-transporteurbano-cus-743245"
+		},
+		"as_transporte_accountKey": {
+			"type": "secureString",
+			"metadata": "Cadena protegida para \"accountKey\"de \"as_transporte\""
+		},
+		"dw_transporte_password": {
+			"type": "secureString",
+			"metadata": "Cadena protegida para \"password\"de \"dw_transporte\""
+		},
+		"erp_transporte_password": {
+			"type": "secureString",
+			"metadata": "Cadena protegida para \"password\"de \"erp_transporte\""
+		},
+		"as_transporte_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://saucbtransporte743246.dfs.core.windows.net/"
+		},
+		"dw_transporte_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sql-ucb-server-transporteurbano-976755.database.windows.net"
+		},
+		"dw_transporte_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "dw_transporte"
+		},
+		"dw_transporte_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "FerranVel"
+		},
+		"erp_transporte_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sql-ucb-server-transporteurbano-976755.database.windows.net"
+		},
+		"erp_transporte_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "erp_transporte_db"
+		},
+		"erp_transporte_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "FerranVel"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI de la cuenta de almacenamiento que contiene las plantillas de ARM vinculadas."
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Token de SAS para la cuenta de almacenamiento que contiene las plantillas de ARM vinculadas"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adf-ucb-transporteurbano-cus-743245_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"as_transporte_accountKey": {
+						"value": "[parameters('as_transporte_accountKey')]"
+					},
+					"dw_transporte_password": {
+						"value": "[parameters('dw_transporte_password')]"
+					},
+					"erp_transporte_password": {
+						"value": "[parameters('erp_transporte_password')]"
+					},
+					"as_transporte_properties_typeProperties_url": {
+						"value": "[parameters('as_transporte_properties_typeProperties_url')]"
+					},
+					"dw_transporte_properties_typeProperties_server": {
+						"value": "[parameters('dw_transporte_properties_typeProperties_server')]"
+					},
+					"dw_transporte_properties_typeProperties_database": {
+						"value": "[parameters('dw_transporte_properties_typeProperties_database')]"
+					},
+					"dw_transporte_properties_typeProperties_userName": {
+						"value": "[parameters('dw_transporte_properties_typeProperties_userName')]"
+					},
+					"erp_transporte_properties_typeProperties_server": {
+						"value": "[parameters('erp_transporte_properties_typeProperties_server')]"
+					},
+					"erp_transporte_properties_typeProperties_database": {
+						"value": "[parameters('erp_transporte_properties_typeProperties_database')]"
+					},
+					"erp_transporte_properties_typeProperties_userName": {
+						"value": "[parameters('erp_transporte_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

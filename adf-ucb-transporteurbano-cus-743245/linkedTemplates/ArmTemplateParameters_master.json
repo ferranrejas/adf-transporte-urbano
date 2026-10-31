@@ -1,0 +1,45 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-ucb-transporteurbano-cus-743245"
+		},
+		"as_transporte_accountKey": {
+			"value": ""
+		},
+		"dw_transporte_password": {
+			"value": ""
+		},
+		"erp_transporte_password": {
+			"value": ""
+		},
+		"as_transporte_properties_typeProperties_url": {
+			"value": "https://saucbtransporte743246.dfs.core.windows.net/"
+		},
+		"dw_transporte_properties_typeProperties_server": {
+			"value": "sql-ucb-server-transporteurbano-976755.database.windows.net"
+		},
+		"dw_transporte_properties_typeProperties_database": {
+			"value": "dw_transporte"
+		},
+		"dw_transporte_properties_typeProperties_userName": {
+			"value": "FerranVel"
+		},
+		"erp_transporte_properties_typeProperties_server": {
+			"value": "sql-ucb-server-transporteurbano-976755.database.windows.net"
+		},
+		"erp_transporte_properties_typeProperties_database": {
+			"value": "erp_transporte_db"
+		},
+		"erp_transporte_properties_typeProperties_userName": {
+			"value": "FerranVel"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
